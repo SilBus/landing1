@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="./img/1.png" alt="" width="110px"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What <br><span>I like</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti aperiam, rem sunt aspernatur
+                    doloribus cum iste quod recusandae repellat impedit magni? Ex quis voluptas quidem doloribus
+                    sapiente repudiandae vitae excepturi?</p>
+                <a href="#">View All Products</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="./img/reloj rojo (1).png" class="pepsi" alt="">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="./img/reloj blanco (1).png" onclick="imgSlider('./img/reloj blanco (1).png'), changeBgColor('#d0d1d2')" alt=""></li>
+            <li><img src="./img/reloj rojo (1).png" onclick="imgSlider('./img/reloj rojo (1).png'), changeBgColor('#e60c2c')" alt=""></li>
+            <li><img src="./img/reloj negro (1).png" onclick="imgSlider('./img/reloj negro (1).png'), changeBgColor('#1e1e1e')" alt=""></li>
+            <li><img src="./img/reloj rosa (1).png" onclick="imgSlider('./img/reloj rosa (1).png'), changeBgColor('#ffc1d5')" alt=""></li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="../img/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="../img/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="../img/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.pepsi').src = anything;
+        }
+
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.toggleMenu');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
